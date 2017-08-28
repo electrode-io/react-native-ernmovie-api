@@ -1,0 +1,172 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Movies",
+    "description": "Top Rated Movies",
+    "version": "1.0.0"
+  },
+  "host": "api.imdb.movies.com",
+  "schemes": [
+    "https"
+  ],
+  "basePath": "/v1",
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/movies": {
+      "get": {
+        "summary": "List<Movie>",
+        "description": "Returns IMDB top rated movies",
+        "tags": [
+          "movies"
+        ],
+        "operationId": "getTopRatedMovies",
+        "responses": {
+          "200": {
+            "description": "List of movies",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Movie"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/movieDetails": {
+      "get": {
+        "summary": "MovieDetails",
+        "description": "Returns the movie details for the requested movie.",
+        "tags": [
+          "movies"
+        ],
+        "operationId": "getMovieDetail",
+        "parameters": [
+          {
+            "name": "status",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Movie",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/Movie"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Movie": {
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "uniqueId"
+        },
+        "title": {
+          "type": "string",
+          "description": "Movie name"
+        },
+        "releaseYear": {
+          "type": "integer",
+          "description": "Movie released year"
+        },
+        "imageUrl": {
+          "type": "string",
+          "description": "URL for the movie banner"
+        },
+        "rating": {
+          "type": "number",
+          "format": "float",
+          "description": "Movie rating 1-10, -1 for no rating"
+        },
+        "synopsis": {
+          "$ref": "#/definitions/Synopsis"
+        }
+      },
+      "required": [
+        "id",
+        "title"
+      ]
+    },
+    "Synopsis": {
+      "properties": {
+        "director": {
+          "$ref": "#/definitions/Person"
+        },
+        "cast": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Person"
+          }
+        },
+        "language": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        },
+        "rating": {
+          "type": "string"
+        },
+        "runtime": {
+          "type": "integer",
+          "description": "Runtime in minutes"
+        },
+        "releaseDate": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "Person": {
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Persons name"
+        },
+        "birthYear": {
+          "description": "Persons birth year",
+          "$ref": "#/definitions/BirthYear"
+        },
+        "gender": {
+          "type": "string"
+        },
+        "isAlive": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "name",
+        "gender"
+      ]
+    },
+    "BirthYear": {
+      "properties": {
+        "month": {
+          "type": "integer",
+          "description": "Birth month"
+        },
+        "year": {
+          "type": "integer",
+          "description": "Birth year"
+        },
+        "date": {
+          "type": "integer",
+          "description": "Birth date"
+        },
+        "place": {
+          "type": "string",
+          "description": "Birth place"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "react-native-ernmvoie-api",
+  "version": "1.0.0",
+  "description": "ERN Generated API for ernmvoie",
+  "main": "javascript/src/index.js",
+  "author": "d0g00g4",
+  "scripts": {
+    "prepublish": "ern regen-api -u same"
+  },
+  "peerDependencies": {
+    "@walmart/react-native-electrode-bridge": "1.x"
+  },
+  "ern": {
+    "message": {
+      "apiName": "ernmvoie",
+      "namespace": "com.ernmvoie.ern",
+      "apiSchemaPath": "schema.json",
+      "artifactId": "react-native-ernmvoie-api"
+    },
+    "moduleType": "ern-api"
+  },
+  "keywords": [
+    "ern-api"
+  ]
+}
