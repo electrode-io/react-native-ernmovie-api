@@ -27,7 +27,7 @@ describe('MoviesApi', function(){
     describe('getMovieDetail', function() {
       it('should send request getMovieDetail successfully', ()=> {
         //uncomment below and update the code to test getMovieDetail
-        //return requests.getMovieDetail(status).then(response=> {
+        //return requests.getMovieDetail(movieId).then(response=> {
         //  if (error) throw error;
         //  expect(response).to.be();
         //});

@@ -1,4 +1,4 @@
-# react-native-ernmvoie-api.MoviesApi
+# react-native-ernmovie-api.MoviesApi
 
 
 Method | Type | Description
@@ -8,7 +8,7 @@ Method | Type | Description
 
 <a name="getMovieDetail"></a>
 # **getMovieDetail**
-> Object getMovieDetail(status)
+> Object getMovieDetail(movieId)
 
 MovieDetails
 
@@ -22,7 +22,7 @@ import { MoviesApi } from 'javascript';
 const requests = MoviesApi.requests();
 
     try {
-    const data = await requests.getMovieDetail(status);
+    const data = await requests.getMovieDetail(movieId);
   console.log('API called successfully. Returned data: ', data);
    }catch(e){
       console.log('an error',e);
@@ -34,7 +34,7 @@ const requests = MoviesApi.requests();
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **status** | **String**|  | 
+ **movieId** | **String**|  | 
 
 ### Return type
 

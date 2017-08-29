@@ -25,13 +25,13 @@ export default class MoviesRequests {
     /**
       * MovieDetails
       * Returns the movie details for the requested movie.
-      * @param  status 
+      * @param  movieId 
       * @param integer timeout in milliseconds
       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object }
       */
 
-     getMovieDetail(status,timeout) {
-                return this._bridge.sendRequest("com.ernmvoie.ern.api.request.getMovieDetail", { data:status, timeout });
+     getMovieDetail(movieId,timeout) {
+                return this._bridge.sendRequest("com.ernmvoie.ern.api.request.getMovieDetail", { data:movieId, timeout });
 
     }
 

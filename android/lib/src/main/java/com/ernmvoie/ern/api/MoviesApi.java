@@ -35,7 +35,7 @@ public final class MoviesApi {
 
         void registerGetTopRatedMoviesRequestHandler(@NonNull final ElectrodeBridgeRequestHandler<None, List<Movie>> handler);
 
-        void getMovieDetail(String status, @NonNull final ElectrodeBridgeResponseListener<Object> responseListener);
+        void getMovieDetail(String movieId, @NonNull final ElectrodeBridgeResponseListener<Object> responseListener);
 
         void getTopRatedMovies(@NonNull final ElectrodeBridgeResponseListener<List<Movie>> responseListener);
 

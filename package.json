@@ -1,9 +1,9 @@
 {
-  "name": "react-native-ernmvoie-api",
-  "version": "1.0.0",
-  "description": "ERN Generated API for ernmvoie",
+  "name": "react-native-ernmovie-api",
+  "version": "0.0.1",
+  "description": "ERN Generated API for top rated movies",
   "main": "javascript/src/index.js",
-  "author": "d0g00g4",
+  "author": "WalmartLabs",
   "scripts": {
     "prepublish": "ern regen-api -u same"
   },
@@ -15,7 +15,7 @@
       "apiName": "ernmvoie",
       "namespace": "com.ernmvoie.ern",
       "apiSchemaPath": "schema.json",
-      "artifactId": "react-native-ernmvoie-api"
+      "artifactId": "react-native-ernmovie-api"
     },
     "moduleType": "ern-api"
   },

@@ -20,10 +20,10 @@ public class MoviesRequests: MoviesAPIRequests {
     //------------------------------------------------------------------------------------------------------------------------------------
 
 
-    public override func getMovieDetail(status: String, responseCompletionHandler: @escaping ElectrodeBridgeResponseCompletionHandler) {
+    public override func getMovieDetail(movieId: String, responseCompletionHandler: @escaping ElectrodeBridgeResponseCompletionHandler) {
         let requestProcessor = ElectrodeRequestProcessor<String, AnyObject, Any>(
             requestName: MoviesAPI.kRequestGetMovieDetail,
-            requestPayload: status,
+            requestPayload: movieId,
             respClass: AnyObject.self,
             responseItemType: nil,
             responseCompletionHandler: responseCompletionHandler)

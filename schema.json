@@ -45,7 +45,7 @@
         "operationId": "getMovieDetail",
         "parameters": [
           {
-            "name": "status",
+            "name": "movieId",
             "in": "query",
             "required": true,
             "type": "string"

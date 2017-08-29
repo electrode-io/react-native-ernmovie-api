@@ -20,7 +20,7 @@ public class MoviesAPIRequests: NSObject {
         assertionFailure("should override")
     }
 
-    public func getMovieDetail(status: String, responseCompletionHandler: @escaping ElectrodeBridgeResponseCompletionHandler) {
+    public func getMovieDetail(movieId: String, responseCompletionHandler: @escaping ElectrodeBridgeResponseCompletionHandler) {
         assertionFailure("should override")
     }
 

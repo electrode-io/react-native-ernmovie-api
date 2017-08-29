@@ -29,8 +29,8 @@ final class MoviesRequests implements MoviesApi.Requests {
     //------------------------------------------------------------------------------------------------------------------------------------
 
     @Override
-    public void getMovieDetail(String status,@NonNull final ElectrodeBridgeResponseListener<Object> responseListener) {
-        new RequestProcessor<>(REQUEST_GET_MOVIE_DETAIL,  status, Object.class, responseListener).execute();
+    public void getMovieDetail(String movieId,@NonNull final ElectrodeBridgeResponseListener<Object> responseListener) {
+        new RequestProcessor<>(REQUEST_GET_MOVIE_DETAIL,  movieId, Object.class, responseListener).execute();
     }
     @Override
     public void getTopRatedMovies(@NonNull final ElectrodeBridgeResponseListener<List<Movie>> responseListener) {
