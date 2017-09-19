@@ -5,10 +5,11 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import java.util.List;
 
 import com.walmartlabs.electrode.reactnative.bridge.Bridgeable;
 
-import static com.walmartlabs.electrode.reactnative.bridge.util.BridgeArguments.getNumberValue;
+import static com.walmartlabs.electrode.reactnative.bridge.util.BridgeArguments.*;
 
 public class Movie implements Parcelable, Bridgeable {
 

@@ -5,10 +5,11 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import java.util.List;
 
 import com.walmartlabs.electrode.reactnative.bridge.Bridgeable;
 
-import static com.walmartlabs.electrode.reactnative.bridge.util.BridgeArguments.getNumberValue;
+import static com.walmartlabs.electrode.reactnative.bridge.util.BridgeArguments.*;
 
 public class Synopsis implements Parcelable, Bridgeable {
 
@@ -117,7 +118,7 @@ public class Synopsis implements Parcelable, Bridgeable {
             bundle.putBundle("director", this.director.toBundle());
         }
         if(this.cast != null) {
-            bundle.putBundle("cast", this.cast.toBundle());
+            updateBundleWithList(this.cast, bundle, "cast");
         }
         if(language != null) {
             bundle.putString("language", this.language );

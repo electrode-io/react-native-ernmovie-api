@@ -1,3 +1,5 @@
+// @flow
+
 
 export default class MoviesRequests {
     constructor(bridge) {
@@ -8,14 +10,14 @@ export default class MoviesRequests {
          * Registers a handler for a particular api.  This allows javascript to handle a request from native.
          * @param The handler function, taking a single parameter being the data of the request and returning a Promise. Implementer of the handler should either resolve the promise with an object being the response data (if any) or reject the promise with an Error
          */
-    registerGetMovieDetailRequestHandler( handler) {
+    registerGetMovieDetailRequestHandler( handler : Function): Promise<any> {
         this._bridge.registerRequestHandler("com.ernmvoie.ern.api.request.getMovieDetail", handler);
     }
         /**
          * Registers a handler for a particular api.  This allows javascript to handle a request from native.
          * @param The handler function, taking a single parameter being the data of the request and returning a Promise. Implementer of the handler should either resolve the promise with an object being the response data (if any) or reject the promise with an Error
          */
-    registerGetTopRatedMoviesRequestHandler( handler) {
+    registerGetTopRatedMoviesRequestHandler( handler : Function): Promise<any> {
         this._bridge.registerRequestHandler("com.ernmvoie.ern.api.request.getTopRatedMovies", handler);
     }
 
@@ -30,7 +32,7 @@ export default class MoviesRequests {
       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object }
       */
 
-     getMovieDetail(movieId,timeout) {
+     getMovieDetail(movieId: string,timeout: number): Promise<any> {
                 return this._bridge.sendRequest("com.ernmvoie.ern.api.request.getMovieDetail", { data:movieId, timeout });
 
     }
@@ -42,7 +44,7 @@ export default class MoviesRequests {
       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:com.ernmvoie.ern.model/Movie> }
       */
 
-     getTopRatedMovies(timeout) {
+     getTopRatedMovies(timeout: number): Promise<any> {
             return this._bridge.sendRequest("com.ernmvoie.ern.api.request.getTopRatedMovies", {timeout});
 
     }
