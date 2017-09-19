@@ -8,7 +8,6 @@
     "prepublish": "ern regen-api -u same",
     "flow": "flow"
   },
-  "peerDependencies": {},
   "ern": {
     "message": {
       "apiName": "ernmvoie",
@@ -24,7 +23,7 @@
   "devDependencies": {
     "flow-bin": "^0.47.0"
   },
-  "dependencies": {
+  "peerDependencies": {
     "react-native-electrode-bridge": "^1.5.6"
   }
 }
