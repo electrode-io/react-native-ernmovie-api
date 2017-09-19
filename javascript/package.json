@@ -1,6 +1,6 @@
 {
 "name": "javascript",
-"version": "0.0.3",
+"version": "0.0.4",
 "description": "Top_Rated_Movies",
 "license": "",
 "main": "./dist/index.js",
