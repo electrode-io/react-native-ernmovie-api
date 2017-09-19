@@ -8,9 +8,7 @@
     "prepublish": "ern regen-api -u same",
     "flow": "flow"
   },
-  "peerDependencies": {
-    "@walmart/react-native-electrode-bridge": "1.x"
-  },
+  "peerDependencies": {},
   "ern": {
     "message": {
       "apiName": "ernmvoie",
@@ -25,5 +23,8 @@
   ],
   "devDependencies": {
     "flow-bin": "^0.47.0"
+  },
+  "dependencies": {
+    "react-native-electrode-bridge": "^1.5.6"
   }
 }
