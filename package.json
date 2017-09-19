@@ -1,6 +1,6 @@
 {
   "name": "react-native-ernmovie-api",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "ERN Generated API for top rated movies",
   "main": "javascript/src/index.js",
   "author": "WalmartLabs",
