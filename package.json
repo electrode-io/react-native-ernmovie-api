@@ -1,6 +1,6 @@
 {
   "name": "react-native-ernmovie-api",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "ERN Generated API for movies",
   "main": "javascript/src/index.js",
   "scripts": {
