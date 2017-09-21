@@ -5,7 +5,7 @@
     "description": "Top Rated Movies",
     "version": "1.0.0"
   },
-  "host": "api.imdb.movies.com",
+  "host": "api.movies.com",
   "schemes": [
     "https"
   ],
@@ -17,7 +17,7 @@
     "/movies": {
       "get": {
         "summary": "List<Movie>",
-        "description": "Returns IMDB top rated movies",
+        "description": "Returns a list of movies",
         "tags": [
           "movies"
         ],
