@@ -3,14 +3,13 @@
   "version": "0.0.8",
   "description": "ERN Generated API for movies",
   "main": "javascript/src/index.js",
-  "author": "WalmartLabs",
   "scripts": {
     "flow": "flow"
   },
   "ern": {
     "message": {
-      "apiName": "ernmvoie",
-      "namespace": "com.ernmvoie.ern",
+      "apiName": "ernmovie",
+      "namespace": "com.ernmovie.ern",
       "apiSchemaPath": "schema.json",
       "artifactId": "react-native-ernmovie-api"
     },
