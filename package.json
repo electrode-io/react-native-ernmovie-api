@@ -21,7 +21,7 @@
   "devDependencies": {
     "flow-bin": "^0.47.0"
   },
-  "peerDependencies": {
-    "react-native-electrode-bridge": "^1.5.6"
+  "dependencies": {
+    "react-native-electrode-bridge": "1.5.x"
   }
 }
