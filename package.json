@@ -1,14 +1,15 @@
 {
-  "name": "react-native-ernmovie-api",
-  "version": "0.0.10",
+  "author": "blemair",
+  "dependencies": {
+    "react-native-electrode-bridge": "1.5.x"
+  },
   "description": "ERN Generated API for movies",
-  "main": "javascript/src/index.js",
-  "scripts": {
-    "flow": "flow"
+  "devDependencies": {
+    "flow-bin": "^0.47.0"
   },
   "ern": {
     "message": {
-      "apiName": "ernmovie",
+      "moduleName": "ernmovie",
       "namespace": "com.ernmovie.ern",
       "apiSchemaPath": "schema.json",
       "artifactId": "react-native-ernmovie-api"
@@ -18,10 +19,10 @@
   "keywords": [
     "ern-api"
   ],
-  "devDependencies": {
-    "flow-bin": "^0.47.0"
+  "main": "javascript/src/index.js",
+  "name": "react-native-ernmovie-api",
+  "scripts": {
+    "flow": "flow"
   },
-  "dependencies": {
-    "react-native-electrode-bridge": "1.5.x"
-  }
+  "version": "0.0.10"
 }

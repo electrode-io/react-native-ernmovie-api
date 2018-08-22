@@ -11,14 +11,14 @@ export default class MoviesRequests {
          * @param The handler function, taking a single parameter being the data of the request and returning a Promise. Implementer of the handler should either resolve the promise with an object being the response data (if any) or reject the promise with an Error
          */
     registerGetMovieDetailRequestHandler( handler : Function): Promise<any> {
-        this._bridge.registerRequestHandler("com.ernmvoie.ern.api.request.getMovieDetail", handler);
+        this._bridge.registerRequestHandler("com.ernmovie.ern.api.request.getMovieDetail", handler);
     }
         /**
          * Registers a handler for a particular api.  This allows javascript to handle a request from native.
          * @param The handler function, taking a single parameter being the data of the request and returning a Promise. Implementer of the handler should either resolve the promise with an object being the response data (if any) or reject the promise with an Error
          */
     registerGetTopRatedMoviesRequestHandler( handler : Function): Promise<any> {
-        this._bridge.registerRequestHandler("com.ernmvoie.ern.api.request.getTopRatedMovies", handler);
+        this._bridge.registerRequestHandler("com.ernmovie.ern.api.request.getTopRatedMovies", handler);
     }
 
     //------------------------------------------------------------------------------------------------------------------------------------
@@ -33,19 +33,19 @@ export default class MoviesRequests {
       */
 
      getMovieDetail(movieId: string,timeout: number): Promise<any> {
-                return this._bridge.sendRequest("com.ernmvoie.ern.api.request.getMovieDetail", { data:movieId, timeout });
+                return this._bridge.sendRequest("com.ernmovie.ern.api.request.getMovieDetail", { data:movieId, timeout });
 
     }
 
     /**
       * List&lt;Movie&gt;
-      * Returns IMDB top rated movies
+      * Returns a list of movies
       * @param integer timeout in milliseconds
-      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:com.ernmvoie.ern.model/Movie> }
+      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:com.ernmovie.ern.model/Movie> }
       */
 
      getTopRatedMovies(timeout: number): Promise<any> {
-            return this._bridge.sendRequest("com.ernmvoie.ern.api.request.getTopRatedMovies", {timeout});
+            return this._bridge.sendRequest("com.ernmovie.ern.api.request.getTopRatedMovies", {timeout});
 
     }
 }
